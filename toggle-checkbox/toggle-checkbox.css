@@ -11,6 +11,8 @@
 
 .toggle-checkbox {
     display: inline-block;
+    /* remove the tap highligh color */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .toggle-checkbox > input[type=checkbox] {
