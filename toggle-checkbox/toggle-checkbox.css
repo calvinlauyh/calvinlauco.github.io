@@ -44,7 +44,7 @@ input[type=checkbox]:checked + .toggle-bg {
     /* border color when toggle */
     border: 1px solid #CCC;
     /* background color when toggle */
-    background-color: #4FBE79;
+    background-color: #FFF;
 }
 /* applicable when background has text */
 .toggle-bg-texton {
