@@ -73,7 +73,7 @@ input[type=checkbox]:checked + .toggle-bg > .toggle-bg-textoff {
     left: 1px;
     border-radius: 50px;
     /* button border color when un-toggle */
-    border: 1px solid #CCC;
+    border: 1px solid #FFF;
     width: 45%;
     height: 90%;
     -ms-transform: translateY(-50%);
