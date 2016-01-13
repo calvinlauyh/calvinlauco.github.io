@@ -28,7 +28,7 @@
     width: 60px;
     line-height: 27px;
     /* background color when un-toggle */
-    background-color: #CCC;
+    background-color: #FFF;
 }
 .toggle-bg:before {
     /* maintain width-to-height ration of 2:1 */
@@ -83,6 +83,8 @@ input[type=checkbox]:checked + .toggle-bg > .toggle-bg-textoff {
     /* button color when un-toggle */
     background-color: #FFF;
     /* button shadow */
+    -moz-box-shadow: 0 1px 3px #888;
+    -webkit-box-shadow: 0 1px 3px #888;
     box-shadow: 0 1px 3px #888;
     -webkit-transition: left 0.3s;
     transition: left 0.3s;
