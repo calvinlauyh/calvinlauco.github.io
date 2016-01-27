@@ -1,3 +1,5 @@
+"use strict";
+
 QUnit.test('simpli', function(assert) {
     assert.notStrictEqual(typeof simpli, "undefined", "simpli exists in global");
 });
@@ -6,6 +8,9 @@ QUnit.module("simpli.getClass()");
 var self = this;
 QUnit.test('getClass(this) === "Global"', function(assert) {
     assert.strictEqual(simpli.getClass(self), "Global");
+});
+QUnit.test('getClass(window) === "Global"', function(assert) {
+    assert.strictEqual(simpli.getClass(window), "Global");
 });
 QUnit.test('getClass("string") === "String"', function(assert) {
     assert.strictEqual(simpli.getClass("string"), "String");
@@ -16,15 +21,13 @@ QUnit.test('getClass(1) === "Number"', function(assert) {
 QUnit.test('getClass([1,2,3]) === "Array"', function(assert) {
     assert.strictEqual(simpli.getClass([1,2,3]), "Array");
 });
-if (typeof HTMLDivElement !== "undefined") {
-    QUnit.test('getClass(document.getElementById("qunit-fixture")) === "HTMLDivElement"', function(assert) {
-        assert.strictEqual(simpli.getClass(document.getElementById("qunit-fixture")), "HTMLDivElement");
-        /* 
-         * There is no HTMLDivElement in old IE browsers, in such case this test
-         * always fail and return Object instead
-         */
-    });
-}
+QUnit.test('getClass(document.getElementById("qunit-fixture")) === "HTMLDivElement"', function(assert) {
+    assert.strictEqual(simpli.getClass(document.getElementById("qunit-fixture")), "HTMLDivElement");
+    /* 
+     * There is no HTMLDivElement in old IE browsers, in such case this test
+     * always fail and return Object instead
+     */
+});
 
 QUnit.module("simpli.isset()");
 QUnit.test('isset({provided argument}) === true', function(assert) {
@@ -80,16 +83,14 @@ QUnit.test('isArray("string") === false', function(assert) {
 QUnit.test('isArray({length:0} === false)', function(assert) {
     assert.strictEqual(simpli.isArray({length:0}), false);
 });
-if (typeof HTMLCollection !== "undefined") {
-    QUnit.test('isArray(document.querySelectorAll("div")) === false', function(assert) {
-         assert.strictEqual(simpli.isArray(document.querySelectorAll("div")), false);
-        /* 
-         * There is no querySelectorAll in old IE browsers, in such case the
-         * polyfill querySelectorAll is used  which gives an Array object, so 
-         * this test case always fail in those browsers
-         */
-    });
-}
+QUnit.test('isArray(document.querySelectorAll("div")) === false', function(assert) {
+    assert.strictEqual(simpli.isArray(document.querySelectorAll("div")), false);
+    /* 
+     * There is no querySelectorAll in old IE browsers, in such case the
+     * polyfill querySelectorAll is used  which gives an Array object, so 
+     * this test case always fail in those browsers
+     */
+});
 
 QUnit.module("simpli.isType() with implicit required flag: true");
 QUnit.test('isType("string", simpli.STRING) === true', function(assert) {
