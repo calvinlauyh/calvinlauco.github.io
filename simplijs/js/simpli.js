@@ -323,77 +323,63 @@ var simpli;
          * @instance
          */
         var mExecAfter;
-    }
-    /**
-     * Allows additional function to be binded to the element type
-     * 
-     * @param {string} pName        the name of the additional function
-     * @param {function} pFunction  the function body
-     * @memberof _simplify
-     * @instance
-     */
-    _simplify.prototype.extend = function(pName, pFunction) {
-        if (!simpli.isType(pName, simpli.STRING)) {
-            throw new Error("Invalid name, it should be a string");
+        /**
+         * Simplify an object by binding those extended extnesions to the provided
+         * object
+         *
+         * @function simplify
+         * @param {object} pObject  the object to be simplified
+         * @return {object}         the simplified object
+         * @memberof _simplify
+         * @instance
+         */
+        this.simplify = function(pObject) {
+            if (simpli.isset(execBefore)) {
+                pObject = execBefore(pObject);
+            }
+            for(var i=0, l=extension.length; i<l; i++) {
+                pObject[extension[i][0]] = extension[i][1];
+            }
+            if (simpli.isset(execAfter)) {
+                pObject = execAfter(pObject);
+            }
+            return pObject;
         }
-        if (!simpli.isType(pFunction, simpli.FUNCTION)) {
-            throw new Error("Invalid function, it should be a function");
+        /**
+         * Callback function to be executed before simplify
+         *
+         * @function execBefore
+         * @param {function} pCallback  function to be executed
+         * @memberof _simplify
+         * @instance
+         */
+        this.execBefore = function(pCallback) {
+            if (!simpli.isType(pCallBack, simpli.FUNCTION)) {
+                throw new Error("Invalid callback, it should be a function");
+            }
+            execBefore = pCallback;
         }
-        mBindedFunc.push([pName, pFunction]);
-    }
-    /**
-     * Simplify an object by binding those extended extnesions to the provided
-     * object
-     *
-     * @param {object} pObject  the object to be simplified
-     * @return {object}         the simplified object
-     * @memberof _simplify
-     * @instance
-     */
-    _simplify.prototype.simplify = function(pObject) {
-        if (simpli.isset(execBefore)) {
-            pObject = execBefore(pObject);
+        /**
+         * Callback function to be executed after simplify
+         *
+         * @function execAfter
+         * @param {function} pCallback  function to be executed
+         * @memberof _simplify
+         * @instance
+         */
+        this.execAfter = function(pCallback) {
+            if (!simpli.isType(pCallback, simpli.FUNCTION)) {
+                throw new Error("Invalid callback, it should be a function");
+            }
+            execAfter= pCallback;
         }
-        for(var i=0, l=extension.length; i<l; i++) {
-            pObject[extension[i][0]] = extension[i][1];
-        }
-        if (simpli.isset(execAfter)) {
-            pObject = execAfter(pObject);
-        }
-        return pObject;
-    }
-    /**
-     * Callback function to be executed before simplify
-     *
-     * @param {function} pCallback  function to be executed
-     * @memberof _simplify
-     * @instance
-     */
-    _simplify.prototype.execBefore = function(pCallback) {
-        if (!simpli.isType(pCallBack, simpli.FUNCTION)) {
-            throw new Error("Invalid callback, it should be a function");
-        }
-        execBefore = pCallback;
-    }
-    /**
-     * Callback function to be executed after simplify
-     *
-     * @param {function} pCallback  function to be executed
-     * @memberof _simplify
-     * @instance
-     */
-    _simplify.prototype.execAfter = function(pCallback) {
-        if (!simpli.isType(pCallback, simpli.FUNCTION)) {
-            throw new Error("Invalid callback, it should be a function");
-        }
-        execAfter= pCallback;
-    }
+    };
 
     // instantiate pre-defiend functions binding management modules
     var _bindings = {
-        HTMLElement = new _simplify(), 
-        HTMLSelectElement = new _simplify(), 
-        HTMLCollection = new _simplify()
+        HTMLElement: new _simplify(), 
+        HTMLSelectElement: new _simplify(), 
+        HTMLCollection: new _simplify()
     };
 
     /**
