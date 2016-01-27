@@ -6,7 +6,7 @@
  * Copyright (c) 2016 Lau Yu Hei
  * 
  * @author Lau Yu Hei
- * @version 1.0.0
+ * @version 1.0.1
  * @license The MIT License (MIT)
  * https://opensource.org/licenses/MIT
  **/
@@ -64,13 +64,14 @@ var simpli;
  * @namespace
  */
 (function(global) {
-    // ensure the script are in the right global
-    if (typeof global.window === "undefined" ||  typeof global.document === "undefined") {
-        return;
-    }
-
     var _obj = ({});
     var toString = _obj.toString;
+    /*
+     * In Internet Explorer 11, "use strict" will create a different Window
+     * object from the non-strict environment. The Window under non-strict
+     * environment can be referred by Window
+     */
+    var _IE11Window = (typeof window !== "undefined")? window: global;
 
     /**
      * @name simpli
@@ -142,20 +143,19 @@ var simpli;
     /**
      * Get the class name of a variable
      *
-     * @function
      * @param {mixed} pVar  the variable to get its class
      * @return {string}     the class name
      * @memberof global.simpli
      */
-    global.simpli.getClass = (function(pGlobal) {
-        return function(pVar) {
-            // identify the global object
-            if (pVar == pGlobal) {
-                return "Global";
-            }
-            return toString.call(pVar).slice(8, -1);
-        };
-    })(global);
+    global.simpli.getClass = function(pVar) {
+        // identify the global object
+        var varString = toString.call(pVar);
+        // compare to both global and IE11 window under non-strict mode
+        if (pVar === global || pVar === _IE11Window) {
+            return "Global";
+        }
+        return varString.slice(8, -1);
+    };
 
     /** 
      * Check if argument is set
