@@ -324,6 +324,24 @@ var simpli;
          */
         var mExecAfter;
         /**
+         * Allows additional function to be binded to the element type
+         * 
+         * @function extend
+         * @param {string} pName        the name of the additional function
+         * @param {function} pFunction  the function body
+         * @memberof _simplify
+         * @instance
+         */
+        this.extend = function(pName, pFunction) {
+            if (!simpli.isType(pName, simpli.STRING)) {
+                throw new Error("Invalid name, it should be a string");
+            }
+            if (!simpli.isType(pFunction, simpli.FUNCTION)) {
+                throw new Error("Invalid function, it should be a function");
+            }
+            mBindedFunc.push([pName, pFunction]);
+        }
+        /**
          * Simplify an object by binding those extended extnesions to the provided
          * object
          *
@@ -334,14 +352,14 @@ var simpli;
          * @instance
          */
         this.simplify = function(pObject) {
-            if (simpli.isset(execBefore)) {
-                pObject = execBefore(pObject);
+            if (simpli.isset(mExecBefore)) {
+                pObject = mExecBefore(pObject);
             }
             for(var i=0, l=extension.length; i<l; i++) {
-                pObject[extension[i][0]] = extension[i][1];
+                pObject[extension[i][0]] = mBindedFunc[i][1];
             }
-            if (simpli.isset(execAfter)) {
-                pObject = execAfter(pObject);
+            if (simpli.isset(mExecAfter)) {
+                pObject = mExecAfter(pObject);
             }
             return pObject;
         }
@@ -357,7 +375,7 @@ var simpli;
             if (!simpli.isType(pCallBack, simpli.FUNCTION)) {
                 throw new Error("Invalid callback, it should be a function");
             }
-            execBefore = pCallback;
+            mExecBefore = pCallback;
         }
         /**
          * Callback function to be executed after simplify
@@ -371,7 +389,7 @@ var simpli;
             if (!simpli.isType(pCallback, simpli.FUNCTION)) {
                 throw new Error("Invalid callback, it should be a function");
             }
-            execAfter= pCallback;
+            mExecAfter = pCallback;
         }
     };
 
@@ -381,41 +399,6 @@ var simpli;
         HTMLSelectElement: new _simplify(), 
         HTMLCollection: new _simplify()
     };
-
-    /**
-     * Add css() method to HTMLElement. It can set the style of the element<br />
-     * Usage:
-     * simpli({HTMLElement}).css(pStyle, pValue);
-     *
-     * @function css
-     * @param {string|string[]} pStyle  style attribute or list of style 
-     *                                  attributes
-     * @param {string|integer} pValue   the attribute's value
-     * @return {object}                 simpli object
-     * @memberof global.simpli
-     * @instance
-     */
-    _bindings.HTMLElement.extend("css", function(pStyle, pValue) {
-        if (!simpli.isType(pStyle, [simpli.STRING, simpli.ARRAY])) {
-            throw new Error("Invalid style, it should be a string or array of string");
-        }
-        if (!simpli.isType(pValue, [simpli.STRING, simpli.NUMBER])) {
-             throw new Error("Invalid value, it should be a string or number");
-        }
-        if (simpli.isArray(pStyle)) {
-            for(var i=0, l=pStyle.length; i<l; i++) {
-                this.css(pStyle[i], pValue);
-            }
-        } else {
-            // use cssText to provide cross-browser compatibility
-            var vCssText = this.style.cssText;
-            if (vCssText.length > 0 && vCssText.slice(-1)!==";") {
-                vCssText += ";";
-            }
-            this.style.cssText = vCssText + pStyle + ":" + pValue + ";";
-        }
-        return this;
-    });
 
     /**
      * Set the CSS display property to non-"none" value<br />
