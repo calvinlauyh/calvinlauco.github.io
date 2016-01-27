@@ -68,6 +68,10 @@ var simpli;
     if (typeof global.window === "undefined" ||  typeof global.document === "undefined") {
         return;
     }
+
+    var _obj = ({});
+    var toString = _obj.toString;
+
     /**
      * @name simpli
      * @namespace
