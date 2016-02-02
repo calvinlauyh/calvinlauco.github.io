@@ -71,7 +71,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line71">line 71</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line112">line 112</a>
     </li></ul></dd>
     
 
@@ -92,6 +92,19 @@
     
 
     
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="global.simpli.DOMElement.html">DOMElement</a></dt>
+            <dd></dd>
+        
+            <dt><a href="global.simpli.queue.html">queue</a></dt>
+            <dd></dd>
+        
+            <dt><a href="global.simpli.stack.html">stack</a></dt>
+            <dd></dd>
+        </dl>
+    
 
      
 
@@ -101,6 +114,159 @@
 
     
         <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".exist"><span class="type-signature">(static) </span>exist<span class="signature">(pArg)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Check if a variable exists. exist() is different from isset() in thesense that exist() only considers undefined as false while isset() considers both undefined and null as false. The exist() is better usedto determine the existence of a JavaScript object while isset() is better used in the context of argument checking or user provided content
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pArg</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">mixed</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the argument to be checked</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line331">line 331</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    whether the arugment is set
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
 
         
             
@@ -207,7 +373,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line146">line 146</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line309">line 309</a>
     </li></ul></dd>
     
 
@@ -252,6 +418,183 @@
 </dl>
 
     
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".inRange"><span class="type-signature">(static) </span>inRange<span class="signature">(pVar, pLowerBound, pUpperBound)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Check if a variable is within a range
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pVar</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">variable to check against</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pLowerBound</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) the lower bound</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pUpperBound</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) the upper bound</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line420">line 420</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -360,7 +703,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line203">line 203</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line449">line 449</a>
     </li></ul></dd>
     
 
@@ -513,7 +856,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line192">line 192</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line407">line 407</a>
     </li></ul></dd>
     
 
@@ -573,7 +916,7 @@
 
 
 <div class="description">
-    Check if a variable's type is NaNisNaN() will return true when the variable is not a number but cannotdetermine if the variable's type is NaN
+    Check if a variable's type is NaNisNaN() will return true when the variable is of type NaN
 </div>
 
 
@@ -689,7 +1032,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line177">line 177</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line392">line 392</a>
     </li></ul></dd>
     
 
@@ -727,7 +1070,7 @@
 
 
 <div class="description">
-    Check if argument is set
+    Check if a variable is set. undefined and null are both considered as not isset
 </div>
 
 
@@ -820,7 +1163,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line163">line 163</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line343">line 343</a>
     </li></ul></dd>
     
 
@@ -1022,7 +1365,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line238">line 238</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line484">line 484</a>
     </li></ul></dd>
     
 
@@ -1067,6 +1410,163 @@
 </dl>
 
     
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".iterativeIsset"><span class="type-signature">(static) </span>iterativeIsset<span class="signature">(pObject, pKey)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Check if a variable is set by recursively check whether each level ofthe object is setExample:If you use if (typeof root.notDefined.notDefined.notDefined === "undefined")This line will throw an error as soon as JavaScript engine realizes root.notDefined is undefined and no further checking is performed. Thus breaking this line. To check for the existence of such case, you can usesimpli.iterativeIsset(root, "notDefined", "notDefined", "notDefined")
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pObject</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the base object</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the key to act upon the object</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line361">line 361</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1178,7 +1678,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line76">line 76</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line117">line 117</a>
     </li></ul></dd>
     
 
@@ -1231,14 +1731,190 @@
 
     
 
-    <h4 class="name" id="css"><span class="type-signature"></span>css<span class="signature">(pStyle, pValue)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="click"><span class="type-signature"></span>click<span class="signature">(pListener, pUseCapture)</span><span class="type-signature"> &rarr; {object}</span></h4>
 
     
 
 
 
 <div class="description">
-    Add css() method to HTMLElement. It can set the style of the element<br />Usage:simpli({HTMLElement}).css(pStyle, pValue);
+    Add onClick() method to document and HTMLElement. It can bind an listener to the onClick event
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pListener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the function to run when the event                                  occurs</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pUseCapture</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">whether the event should be executed                                  in the capturing or in the bubbling                                  phase</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line857">line 857</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="css"><span class="type-signature"></span>css<span class="signature">(pStyle, pValue)</span><span class="type-signature"> &rarr; {string|object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Add css() method to HTMLElement. It can get and set the style of the elementUsage:simpli({HTMLElement}).css(pStyle, pValue);
 </div>
 
 
@@ -1293,7 +1969,7 @@
 
             
 
-            <td class="description last">style attribute or list of style                                  attributes</td>
+            <td class="description last">style attribute or list of style                                      attributes</td>
         </tr>
 
     
@@ -1309,7 +1985,7 @@
 <span class="param-type">string</span>
 |
 
-<span class="param-type">integer</span>
+<span class="param-type">number</span>
 
 
             
@@ -1319,7 +1995,7 @@
 
             
 
-            <td class="description last">the attribute's value</td>
+            <td class="description last">(Optional)the attribute's value                                     If not provided, it is for                                     retrieval</td>
         </tr>
 
     
@@ -1360,7 +2036,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line399">line 399</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1055">line 1055</a>
     </li></ul></dd>
     
 
@@ -1387,7 +2063,7 @@
 
         
 <div class="param-desc">
-    simpli object
+    string when doing retrieval, this                                      object when doing set
 </div>
 
 
@@ -1398,6 +2074,9 @@
     </dt>
     <dd>
         
+<span class="param-type">string</span>
+|
+
 <span class="param-type">object</span>
 
 
@@ -1559,7 +2238,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line499">line 499</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1220">line 1220</a>
     </li></ul></dd>
     
 
@@ -1586,7 +2265,7 @@
 
         
 <div class="param-desc">
-    simpli object
+    this object
 </div>
 
 
@@ -1758,7 +2437,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line560">line 560</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1281">line 1281</a>
     </li></ul></dd>
     
 
@@ -1785,7 +2464,7 @@
 
         
 <div class="param-desc">
-    simpli object
+    this object
 </div>
 
 
@@ -1811,7 +2490,7 @@
 
     
 
-    <h4 class="name" id="forEach"><span class="type-signature"></span>forEach<span class="signature">(pCcllback, Object)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="forEach"><span class="type-signature"></span>forEach<span class="signature">(pCcllback, Object)</span><span class="type-signature"> &rarr; {object}</span></h4>
 
     
 
@@ -1929,7 +2608,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line648">line 648</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1366">line 1366</a>
     </li></ul></dd>
     
 
@@ -1952,6 +2631,199 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="forEach"><span class="type-signature"></span>forEach<span class="signature">(pCcllback, Object)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Add forEach() method to HTMLElement. It adds compatibility support to single HTMLElement<br />Usage:{HTMLCollection}.forEach(callback, (optional)thisArg);
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pCcllback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the callback function to be called on each                              HTMLElement, its signature should be like                             function(currentElement, index, array) {}</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Object</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">pThisArg       (Optional) the "this" context in the                              callback</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1339">line 1339</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -2011,7 +2883,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line633">line 633</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1419">line 1419</a>
     </li></ul></dd>
     
 
@@ -2038,7 +2910,7 @@
 
         
 <div class="param-desc">
-    simpli object
+    this object
 </div>
 
 
@@ -2115,7 +2987,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line618">line 618</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1404">line 1404</a>
     </li></ul></dd>
     
 
@@ -2142,7 +3014,7 @@
 
         
 <div class="param-desc">
-    simpli object
+    this object
 </div>
 
 
@@ -2219,7 +3091,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line484">line 484</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1205">line 1205</a>
     </li></ul></dd>
     
 
@@ -2246,7 +3118,804 @@
 
         
 <div class="param-desc">
-    simpli object
+    this object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="listenTo"><span class="type-signature"></span>listenTo<span class="signature">(pType, pListener, pUseCapture)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Add listenTo() method to document and HTMLElement. It can listen to specific type of eventUsage:simpli({HTMLElement|document}).listenTo(...);
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a string representing the event type                                  to listen for</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pListener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the function to run when the event                                  occurs</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pUseCapture</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">whether the event should be executed                                  in the capturing or in the bubbling                                  phase</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line770">line 770</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="parent"><span class="type-signature"></span>parent<span class="signature">()</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Add parent() method to document and HTMLElement. It can return the parent node of the simpli objectUsage:simpli({HTMLElement|document}).parent();
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line723">line 723</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    parent simpli object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="prop"><span class="type-signature"></span>prop<span class="signature">(pProp, pValue)</span><span class="type-signature"> &rarr; {object|string|undefined}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Add prop() method to document and HTMLElement. It can get and set thethe attributes and properties of the simpli object
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pProp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the property name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional)the  new value for                                     the property</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line912">line 912</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this object for set, or string                                      or underfined for retrieval
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+|
+
+<span class="param-type">string</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="ready"><span class="type-signature"></span>ready<span class="signature">(pListener)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Add ready() method to document. It can listen to DOM content loaded event
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pListener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the function to run when the event                                  occurs</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line820">line 820</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeCss"><span class="type-signature"></span>removeCss<span class="signature">(pStyle)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Add removeCss() to HTMLElement. It can remove inline css from the element
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pStyle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">style attribute or list of style                                      attributes</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1127">line 1127</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this object
 </div>
 
 
@@ -2372,7 +4041,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line434">line 434</a>
+        <a href="simpli.js.html">simpli.js</a>, <a href="simpli.js.html#line1154">line 1154</a>
     </li></ul></dd>
     
 
@@ -2399,7 +4068,7 @@
 
         
 <div class="param-desc">
-    simpli object
+    this object
 </div>
 
 
@@ -2436,13 +4105,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_simplify.html">_simplify</a></li></ul><h3>Namespaces</h3><ul><li><a href="global.html">global</a></li><li><a href="global.simpli.html">simpli</a></li></ul><h3>Global</h3><ul><li><a href="global.html#simpli">simpli</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="global.simpli.DOMElement.html">DOMElement</a></li><li><a href="global.simpli.queue.html">queue</a></li><li><a href="global.simpli.stack.html">stack</a></li></ul><h3>Namespaces</h3><ul><li><a href="global.html">global</a></li><li><a href="global.simpli.html">simpli</a></li></ul><h3>Global</h3><ul><li><a href="global.html#simpli">simpli</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Wed Jan 27 2016 21:37:44 GMT+0800 (China Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Feb 02 2016 12:07:47 GMT+0800 (China Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
